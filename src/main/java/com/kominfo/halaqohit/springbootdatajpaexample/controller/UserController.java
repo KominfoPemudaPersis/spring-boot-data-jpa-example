@@ -35,8 +35,18 @@ public class UserController {
     }
 
     @GetMapping("users/{userId}")
+    @ResponseBody
     public User findUserById(@PathVariable("userId") Long userId) {
         return userRepository.findOne(userId);
+    }
+
+
+    @PutMapping("users/{userId}")
+    public User update(@PathVariable("userId") Long userId, @RequestBody User userObject) {
+        User user = userRepository.findOne(userId);
+        user.setName(userObject.getName());
+        user.setCountry(userObject.getCountry());
+        return userRepository.save(user);
     }
 
 }
