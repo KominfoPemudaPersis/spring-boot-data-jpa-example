@@ -34,5 +34,9 @@ public class UserController {
         return userRepository.findAll();
     }
 
+    @GetMapping("users/{userId}")
+    public User findUserById(@PathVariable("userId") Long userId) {
+        return userRepository.findOne(userId);
+    }
 
 }
