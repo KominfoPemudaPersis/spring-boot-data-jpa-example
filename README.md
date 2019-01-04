@@ -125,13 +125,14 @@ Misalnya, jika Anda telah mengembangkan lapisan data untuk memenuhi / patuh deng
 Membuat repositori berbasis JPA sangat sederhana. Anda harus membuat **interface** yang **extends** (memperluas) interface **JpaRepository** dengan memberikan parameter generik, kelas **Entitas**, dan **tipe ID**.
 Berikut adalah contoh kode untuk mengimplementasikan **UserRepository**.
 ```
-import com.springbootdev.domain.entity.User;
+package com.kominfo.halaqohit.springbootdatajpaexample.repository;
+
+import com.kominfo.halaqohit.springbootdatajpaexample.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UserRepository extends JpaRepository<User, Long>
-{
-
+public interface UserRepository extends JpaRepository<User, Long> {
 }
+
 ```
 **User** – Adalah kelas entititas
 
