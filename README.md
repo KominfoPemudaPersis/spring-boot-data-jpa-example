@@ -218,6 +218,8 @@ Membuat data User
 
 Berikut postman request and response.
 
+![Membuat data User](img/add.png "Membuat data User")
+
 ```
 @PostMapping("/users")
 public User create(@RequestBody User user)
@@ -234,16 +236,24 @@ Mengambil semua data user
 
 `GET  /api/users`
 
+![Mengambil semua data user](img/get.png "Mengambil semua data user")
+
 Mengambil data user tertentu
 
 `GET  /api/users/{userId}`
+
+![Mengambil data user tertentu](img/find.png "Mengambil data user tertentu")
+
 
 Memperbaharui data user tertentu
 
 `PUT  /api/users/{userId}`
 
+![Memperbaharui data user tertentu](img/update.png "Memperbaharui data user tertentu")
+
 Menghapus data user tertentu
 
 `DELETE  /api/users/{userId}`
 
+![Menghapus data user tertentu](img/delete.png "Menghapus data user tertentu")
 
