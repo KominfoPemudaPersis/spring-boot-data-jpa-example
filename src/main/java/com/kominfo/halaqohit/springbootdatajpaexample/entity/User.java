@@ -1,7 +1,6 @@
 package com.kominfo.halaqohit.springbootdatajpaexample.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * Created by IntelliJ IDEA.
@@ -17,6 +16,8 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "user")
 public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     private String name;
