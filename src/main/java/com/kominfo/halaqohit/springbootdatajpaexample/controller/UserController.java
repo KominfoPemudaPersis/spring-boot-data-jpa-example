@@ -3,9 +3,9 @@ package com.kominfo.halaqohit.springbootdatajpaexample.controller;
 import com.kominfo.halaqohit.springbootdatajpaexample.entity.User;
 import com.kominfo.halaqohit.springbootdatajpaexample.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * Created by IntelliJ IDEA.
@@ -24,7 +24,15 @@ public class UserController {
     @Autowired
     UserRepository userRepository;
 
+    @PostMapping("users")
     public User create(@RequestBody User user) {
         return userRepository.save(user);
     }
+
+    @GetMapping("users")
+    public List<User> findAll() {
+        return userRepository.findAll();
+    }
+
+
 }
