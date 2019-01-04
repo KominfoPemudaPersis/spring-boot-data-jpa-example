@@ -217,3 +217,33 @@ Membuat data User
 `POST     /api/users`
 
 Berikut postman request and response.
+
+```
+@PostMapping("/users")
+public User create(@RequestBody User user)
+{
+  return userRepository.save(user);
+}
+```
+
+**@RequestBody** - Body request (permintaan) HTTP akan dipetakan ke kelas Pengguna.
+
+**@ResponseBody** - Objek kembalian akan dipetakan ke badan respon HTTP.
+
+Mengambil semua data user
+
+`GET  /api/users`
+
+Mengambil data user tertentu
+
+`GET  /api/users/{userId}`
+
+Memperbaharui data user tertentu
+
+`PUT  /api/users/{userId}`
+
+Menghapus data user tertentu
+
+`DELETE  /api/users/{userId}`
+
+
