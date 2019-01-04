@@ -49,4 +49,10 @@ public class UserController {
         return userRepository.save(user);
     }
 
+    @DeleteMapping("users/{userId}")
+    public List<User> delete(@PathVariable("userId") Long userId) {
+        userRepository.delete(userId);
+        return userRepository.findAll();
+    }
+
 }
