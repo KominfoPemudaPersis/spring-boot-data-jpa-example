@@ -14,10 +14,10 @@ import javax.persistence.*;
  */
 
 @Entity
-@Table(name = "user")
+@Table(name = "user2")
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
     private String name;
@@ -45,6 +45,14 @@ public class User {
     }
 
     public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public User() {
+    }
+
+    public User(String name, String country) {
+        this.name = name;
         this.country = country;
     }
 }

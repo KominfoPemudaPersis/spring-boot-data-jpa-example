@@ -34,10 +34,16 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <!--MySQL JDBC Connector -->
+        <!--<dependency>-->
+        <!--<groupId>mysql</groupId>-->
+        <!--<artifactId>mysql-connector-java</artifactId>-->
+        <!--<scope>runtime</scope>-->
+        <!--</dependency>-->
+        <!--PostgreSQL JDBC Connector -->
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <scope>runtime</scope>
+            <groupId>postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>9.1-901-1.jdbc4</version>
         </dependency>
 
         <dependency>
